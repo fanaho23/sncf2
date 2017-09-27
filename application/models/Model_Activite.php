@@ -1,10 +1,11 @@
 <?php
 
-class Model_Activite extends CI_Controller{
+class Model_Activite extends CI_Model{
     
     public function GetAllActivites()    
             {
-                $sql = $this->db->query("Select* from activite");
+                $sql = $this->db->query("select * from activite");
                 return $sql->result();
             }
 }
+?>
