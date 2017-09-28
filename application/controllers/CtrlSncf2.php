@@ -14,7 +14,7 @@ class CtrlSncf2 extends CI_Controller
                 $this->load->model("Model_Activite");
                 
                 $this->load->model("Model_Formation");
-//Je n'arrive pas a récuperer l'id de la categorie j'ai donc du crée une fonction GetIdActivites qui recupere le numero et je charge la function de mon model en parametre de la function GetAllFormations
+//Je n'arrive pas a récuperer l'id de la categorie j'ai donc du crée une fonction GetIdActivites qui recupere le numero des activites et je charge la function de mon model en parametre de la function GetAllFormations
                 $data['lesFormations'] = $this->load->GetAllFormations($data['activite']= $this->Model_Activite->GetIdActivites());
                 $this->load->view("v_Activite",$data);
         
