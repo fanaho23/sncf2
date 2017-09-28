@@ -3,14 +3,18 @@ function AfficherFormation()
         $.ajax 
         (
             {
-                data:"data="+$('#lstCategories').select(),
-                success:function($data)
+                type:"get",
+                url:"index.php/CtrlSncf2/AfficherLesFormations",
+                data:"numActivite="+$('#lstActivites').val(),
+                success:function(data)
                 {
-                    alert('Salut');
+                    $('#divFormations').empty();
+                $('#divFormations').append(data);
+ 
                 },
-                error:function($data)
+                error:function()
                 {
-                    alert('Bye');
+                    alert('Erreur');
                 }
             }
         );

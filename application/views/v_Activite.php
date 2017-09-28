@@ -6,12 +6,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src = "<?php echo base_url();?>JS/lesFonctions.js"></script>
-        <script type="text/javascript" src="<?php echo base_url();?>JQUERY/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url();?>JQuery/jquery-3.1.1.js"></script>
         <script type="text/javascript">
-            $.(
+            $(
                 function()
                 {
-                    $('#lstActivites').select
+                    $('#lstActivites').change
                     (
                         function(){ AfficherFormation();}
                     );    
@@ -30,14 +30,8 @@
                     }
             ?>
         </select><br>
-        <select id ="lstFormations">
-            <?php
-                foreach($lesFormations as $formation)
-                {
-                    echo "<option value='".$formation->code."'>".$formation->intitule."</option>";
-                } 
-            ?>
-        </select>
+        <div id="divFormations"></div>
+        <div id="divAgents"></div>
     </body>
 </html>
 
