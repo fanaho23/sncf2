@@ -11,15 +11,12 @@
             $.(
                 function()
                 {
-                    $('#lesActivites').select()
-                    {
-                        function AfficherLesFormation();
-                    }    
+                    $('#lstActivites').select
+                    (
+                        function(){ AfficherFormation();}
+                    );    
                 }
             );
-            
-            
-            
         </script>
     </head>
     <body>
@@ -29,7 +26,7 @@
             <?php 
                 foreach ($lesActivites as $act)
                     {
-                       echo "<option id='opt1' value='".$act->numero."'>".$act->libelle."</option>";
+                       echo "<option value='".$act->numero."'>".$act->libelle."</option>";
                     }
             ?>
         </select><br>

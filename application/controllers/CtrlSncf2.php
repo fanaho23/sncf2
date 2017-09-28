@@ -11,9 +11,11 @@ class CtrlSncf2 extends CI_Controller
             }
     public function AfficherLesFormations()
             {
-                $activite = $_GET['activite'];
+                $this->load->model("Model_Activite");
+                
                 $this->load->model("Model_Formation");
-                $data['lesFormations'] = $this->load->GetAllFormations($activite);
+//Je n'arrive pas a récuperer l'id de la categorie j'ai donc du crée une fonction GetIdActivites qui recupere le numero et je charge la function de mon model en parametre de la function GetAllFormations
+                $data['lesFormations'] = $this->load->GetAllFormations($data['activite']= $this->Model_Activite->GetIdActivites());
                 $this->load->view("v_Activite",$data);
         
             }

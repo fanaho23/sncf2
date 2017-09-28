@@ -3,7 +3,15 @@ function AfficherFormation()
         $.ajax 
         (
             {
-                data:"activite"+$('#lstActivites').select()
+                data:"data="+$('#lstCategories').select(),
+                success:function($data)
+                {
+                    alert('Salut');
+                },
+                error:function($data)
+                {
+                    alert('Bye');
+                }
             }
         );
     }
