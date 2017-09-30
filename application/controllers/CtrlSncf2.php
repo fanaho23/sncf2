@@ -27,7 +27,7 @@ class CtrlSncf2 extends CI_Controller
             }
     public function AfficherLesAgents()
             {
-                $numFormation = GET_['numFormation'];
+                $numFormation = $_GET['numFormation'];
                 $this->load->model("Model_Agent");
                 $data['lesAgents'] = $this->Model_Agent->GetAllAgents($numFormation);
                 $this->load->view("v_Agent",$data);

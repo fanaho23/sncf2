@@ -14,8 +14,13 @@
                     $('#lstActivites').change
                     (
                         function(){ AfficherFormation();}
-                    );    
+                    );
+                    $('#divFormations').change
+                    (
+                            function(){AfficherAgent();}
+                    );
                 }
+                
             );
         </script>
     </head>
