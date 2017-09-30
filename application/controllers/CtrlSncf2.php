@@ -14,7 +14,7 @@ class CtrlSncf2 extends CI_Controller
                 //$this->load->model("Model_Activite");
                 
         // On récupère le numéro de l'activité grace à l'appel eAJAX en GET ==> voir dans le fichier lesFonctions.js
-        $numActivite = $_GET['numActivite'];
+                $numActivite = $_GET['numActivite'];
         
                 $this->load->model("Model_Formation");
 //Je n'arrive pas a récuperer l'id de la categorie j'ai donc du crée une fonction GetIdActivites qui recupere le numero des activites et je charge la function de mon model en parametre de la function GetAllFormations
@@ -24,5 +24,12 @@ class CtrlSncf2 extends CI_Controller
                 
                 $this->load->view("v_Formation",$data);
         
+            }
+    public function AfficherLesAgents()
+            {
+                $numFormation = GET_['numFormation'];
+                $this->load->model("Model_Agent");
+                $data['lesAgents'] = $this->Model_Agent->GetAllAgents($numFormation);
+                $this->load->view("v_Agent",$data);
             }
 }
