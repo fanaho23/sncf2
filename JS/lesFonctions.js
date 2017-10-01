@@ -21,13 +21,13 @@ function AfficherFormation()
         );
         
     }
-    function AfficherAgent()
+    function AfficherAgent(numeroFormation)
     {
         $.ajax( 
             {
                 type:"get",
                 url:"index.php/CtrlSncf2/AfficherLesAgents",
-                data:"numFormation="+$('#divFormations').val(),
+                data:"numFormation="+numeroFormation,
                 success:function(data)
                 {
                     $('#divAgents').empty();

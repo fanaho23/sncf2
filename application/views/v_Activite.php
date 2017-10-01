@@ -15,10 +15,10 @@
                     (
                         function(){ AfficherFormation();}
                     );
-                    $('#divFormations').change
-                    (
-                            function(){AfficherAgent();}
-                    );
+//                    $('#divFormations').change
+//                    (
+//                            function(){AfficherAgent();}
+//                    );
                 }
                 
             );
